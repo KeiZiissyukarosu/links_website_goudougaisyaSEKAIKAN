@@ -1,3 +1,7 @@
+body {
+  background-color:  lightblue;
+}
+
 .member-card {
   border: 1px solid #ccc;
   padding: 10px;
@@ -23,8 +27,4 @@
 .member-position {
   color: #555;
   margin-top: 4px;
-}
-
-body {
-  background-color: skyblue;
 }
