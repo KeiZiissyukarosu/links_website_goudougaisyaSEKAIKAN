@@ -34,8 +34,6 @@ body {
 }
 
 /* --- お問い合わせページ用追加 --- */
-
-/* 段落の行間 */
 p {
   line-height: 1.6;
 }
@@ -48,7 +46,7 @@ nav {
   border-radius: 8px;
 }
 
-/* ヘッダーナビ横並び */
+/* --- ヘッダーナビ横並び --- */
 header nav ul {
   display: flex;          /* 横並び */
   gap: 20px;              /* リンク間の間隔 */
