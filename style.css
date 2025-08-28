@@ -1,7 +1,11 @@
+/* bodyの背景色は既存のまま */
 body {
-  background-color:  lightblue;
+  background-color: lightblue;
+  font-family: Arial, sans-serif;
+  margin: 20px;
 }
 
+/* メンバーカード */
 .member-card {
   border: 1px solid #ccc;
   padding: 10px;
@@ -27,4 +31,38 @@ body {
 .member-position {
   color: #555;
   margin-top: 4px;
+}
+
+/* --- お問い合わせページ用追加 --- */
+
+/* 段落の行間 */
+p {
+  line-height: 1.6;
+}
+
+/* ナビゲーション */
+nav {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #ffffffcc; /* 少し透けた白 */
+  border-radius: 8px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  margin: 5px 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: #007acc;
+}
+
+nav a:hover {
+  text-decoration: underline;
 }
