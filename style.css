@@ -8,14 +8,17 @@ body {
 
 /* --- ヘッダー + ナビゲーション --- */
 header {
-  text-align: center; /* ヘッダー全体を中央揃え */
+  text-align: center;          /* ヘッダー全体を中央揃え */
   margin-bottom: 20px;
+  background-color: #ffffff;   /* ヘッダー背景を白に */
+  padding: 10px 0;             /* 上下の余白 */
+  border-radius: 8px;
 }
 
 header nav ul {
-  display: flex;             /* 横並び */
-  justify-content: center;   /* 中央揃え */
-  gap: 20px;                 /* リンク間隔 */
+  display: flex;               /* 横並び */
+  justify-content: center;     /* 横並び中央揃え */
+  gap: 20px;                   /* リンク間隔 */
   padding: 0;
   margin: 0 auto;
   list-style: none;
