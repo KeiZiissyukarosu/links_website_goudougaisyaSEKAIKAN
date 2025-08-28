@@ -67,6 +67,41 @@ nav a:hover {
   text-decoration: underline;
 }
 
+/* --- ヘッダーナビ横並び＋レスポンシブ対応 --- */
+header nav ul {
+  display: flex;          /* 横並び */
+  gap: 20px;              /* リンク間の間隔 */
+  flex-wrap: wrap;        /* 幅が足りない場合は改行 */
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+header nav li {
+  margin: 0;              /* li余白リセット */
+}
+
+header nav a {
+  padding: 5px 10px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #007acc;
+  transition: background-color 0.3s;
+}
+
+header nav a:hover {
+  background-color: #007acc22;
+  border-radius: 5px;
+}
+
+/* レスポンシブ対応 */
+@media screen and (max-width: 600px) {
+  header nav ul {
+    flex-direction: column;  /* 幅が600px以下なら縦並び */
+    gap: 10px;               /* 縦方向の間隔 */
+  }
+}
+
 /* --- 制作実績ページ用追加 --- */
 .works-container {
   display: flex;            /* 横並び */
