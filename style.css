@@ -46,17 +46,18 @@ nav {
   border-radius: 8px;
 }
 
-/* --- ヘッダーナビ横並び --- */
+/* --- ヘッダーナビ横並び＋中央揃え --- */
 header nav ul {
-  display: flex;          /* 横並び */
-  gap: 20px;              /* リンク間の間隔 */
+  display: flex;            /* 横並び */
+  justify-content: center;  /* 中央揃え */
+  gap: 20px;                /* リンク間の間隔 */
   padding: 0;
   margin: 0;
   list-style: none;
 }
 
 header nav li {
-  margin: 0;              /* li余白リセット */
+  margin: 0;                /* li余白リセット */
 }
 
 header nav a {
@@ -70,6 +71,15 @@ header nav a {
 header nav a:hover {
   background-color: #007acc22;
   border-radius: 5px;
+}
+
+/* レスポンシブ対応（スマホで縦並び） */
+@media screen and (max-width: 600px) {
+  header nav ul {
+    flex-direction: column;  /* 幅が600px以下なら縦並び */
+    gap: 10px;               /* 縦方向の間隔 */
+    align-items: center;     /* 中央揃え */
+  }
 }
 
 /* --- 他ページナビ用（縦並び） --- */
