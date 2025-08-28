@@ -40,7 +40,7 @@ p {
   line-height: 1.6;
 }
 
-/* ナビゲーション */
+/* --- ナビゲーション共通 --- */
 nav {
   margin-top: 20px;
   padding: 10px;
@@ -48,30 +48,10 @@ nav {
   border-radius: 8px;
 }
 
-nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-nav li {
-  margin: 5px 0;
-}
-
-nav a {
-  text-decoration: none;
-  color: #007acc;
-}
-
-nav a:hover {
-  text-decoration: underline;
-}
-
-/* --- ヘッダーナビ横並び＋レスポンシブ対応 --- */
+/* ヘッダーナビ横並び */
 header nav ul {
   display: flex;          /* 横並び */
   gap: 20px;              /* リンク間の間隔 */
-  flex-wrap: wrap;        /* 幅が足りない場合は改行 */
   padding: 0;
   margin: 0;
   list-style: none;
@@ -94,23 +74,35 @@ header nav a:hover {
   border-radius: 5px;
 }
 
-/* レスポンシブ対応 */
-@media screen and (max-width: 600px) {
-  header nav ul {
-    flex-direction: column;  /* 幅が600px以下なら縦並び */
-    gap: 10px;               /* 縦方向の間隔 */
-  }
+/* --- 他ページナビ用（縦並び） --- */
+nav ul:not(header nav ul) {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav li:not(header nav li) {
+  margin: 5px 0;
+}
+
+nav a:not(header nav a) {
+  text-decoration: none;
+  color: #007acc;
+}
+
+nav a:not(header nav a):hover {
+  text-decoration: underline;
 }
 
 /* --- 制作実績ページ用追加 --- */
 .works-container {
-  display: flex;            /* 横並び */
-  flex-wrap: wrap;          /* 幅が足りない場合は改行 */
-  gap: 20px;                /* カード間の間隔 */
+  display: flex;            
+  flex-wrap: wrap;          
+  gap: 20px;                
 }
 
 .work {
-  flex: 1 1 300px;          /* 幅の最小値300px、画面幅に応じて拡大 */
+  flex: 1 1 300px;          
   border: 2px solid #333;
   padding: 15px;
   border-radius: 8px;
@@ -131,7 +123,7 @@ header nav a:hover {
   display: inline-block;
   margin-top: 10px;
   padding: 8px 12px;
-  background-color: #FF0000;    /* YouTube色 */
+  background-color: #FF0000;    
   color: #fff;
   text-decoration: none;
   border-radius: 5px;
