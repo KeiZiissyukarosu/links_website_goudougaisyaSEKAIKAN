@@ -125,6 +125,12 @@ header nav a:hover {
   background-color: #cc0000;
 }
 
+.logo {
+  height: 60px;       /* 高さを60pxに固定（好みで調整可） */
+  object-fit: contain; /* 元の縦横比を崩さずに収まるように調整 */
+}
+
+
 /* --- レスポンシブ対応（スマホ） --- */
 @media screen and (max-width: 600px) {
   header nav ul {
