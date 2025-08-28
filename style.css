@@ -11,7 +11,7 @@ header {
   text-align: center;          /* ヘッダー全体中央揃え */
   margin-bottom: 20px;
   padding: 10px 0;             /* 上下余白 */
-  /* header自体は背景透明のまま */
+  /* header自体は背景透明 */
 }
 
 /* --- ナビゲーションのみ白背景 --- */
@@ -128,7 +128,7 @@ header nav a:hover {
 /* --- レスポンシブ対応 --- */
 @media screen and (max-width: 600px) {
   header nav ul {
-    flex-direction: column;  /* ヘッダー縦並び */
+    flex-direction: column;  /* ヘッダーナビ縦並び */
     gap: 10px;
   }
 
@@ -149,4 +149,3 @@ header nav a:hover {
     flex: 1 1 45%; /* 2列に収まる */
   }
 }
-
