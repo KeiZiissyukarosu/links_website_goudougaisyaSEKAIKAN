@@ -66,3 +66,44 @@ nav a {
 nav a:hover {
   text-decoration: underline;
 }
+
+/* --- 制作実績ページ用追加 --- */
+.works-container {
+  display: flex;            /* 横並び */
+  flex-wrap: wrap;          /* 幅が足りない場合は改行 */
+  gap: 20px;                /* カード間の間隔 */
+}
+
+.work {
+  flex: 1 1 300px;          /* 幅の最小値300px、画面幅に応じて拡大 */
+  border: 2px solid #333;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 2px 2px 5px #aaa;
+}
+
+.work h2 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.work p {
+  line-height: 1.5;
+}
+
+.work a {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 12px;
+  background-color: #FF0000;    /* YouTube色 */
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.work a:hover {
+  background-color: #cc0000;
+}
