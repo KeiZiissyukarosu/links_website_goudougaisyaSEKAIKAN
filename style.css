@@ -126,7 +126,7 @@ header nav a:hover {
 }
 
 .logo {
-  height: 60px;       /* 高さを60pxに固定（好みで調整可） */
+  height: 100px;       /* 高さを60pxに固定（好みで調整可） */
   object-fit: contain; /* 元の縦横比を崩さずに収まるように調整 */
 }
 
