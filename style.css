@@ -51,8 +51,8 @@ header nav a:hover {
 /* --- メンバーカード --- */
 .members-container {
   display: flex;
-  flex-wrap: wrap;             /* 横にどんどん並べる */
-  justify-content: flex-start; /* 左寄せ */
+  flex-wrap: wrap;             
+  justify-content: flex-start; 
   gap: 20px;
   margin-top: 20px;
 }
@@ -64,6 +64,9 @@ header nav a:hover {
   text-align: center;
   border-radius: 8px;
   box-shadow: 2px 2px 5px #aaa;
+
+  /* ホバーアニメーション */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .member-card img {
@@ -80,6 +83,12 @@ header nav a:hover {
 .member-position {
   color: #555;
   margin-top: 4px;
+}
+
+/* ホバー時の浮かび上がり */
+.member-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 4px 8px 15px rgba(0,0,0,0.2);
 }
 
 /* --- 制作実績カード --- */
@@ -126,32 +135,30 @@ header nav a:hover {
 }
 
 .logo {
-  height: 100px;       /* 高さを60pxに固定（好みで調整可） */
-  object-fit: contain; /* 元の縦横比を崩さずに収まるように調整 */
+  height: 100px;       
+  object-fit: contain; 
 }
-
 
 /* --- レスポンシブ対応（スマホ） --- */
 @media screen and (max-width: 600px) {
   header nav ul {
-    flex-direction: column;  /* ヘッダーナビ縦並び */
+    flex-direction: column;  
     gap: 10px;
   }
 
   .works-container {
-    flex-direction: column;  /* 制作実績縦並び */
+    flex-direction: column;  
     gap: 10px;
   }
 
   .members-container {
-    flex-direction: row;      /* 横並びのまま折返し */
     flex-wrap: wrap;
     justify-content: flex-start;
     gap: 10px;
   }
 
   .member-card {
-    flex: 1 1 45%;            /* 2列に収まる */
-    max-width: 45%;           /* 横幅制限 */
+    flex: 1 1 45%;
+    max-width: 45%;
   }
 }
