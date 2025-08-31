@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>越智彪冴 | 合同会社diviant</title>
+  <link rel="stylesheet" href="../style.css"> <!-- 1階層上のCSS -->
+  
+  <!-- SEO / SNS用 -->
+  <meta name="description" content="越智彪冴のプロフィールページ。合同会社diviant代表取締役、楽曲制作・各種楽曲提供・人材派遣を担当。">
+  <meta property="og:title" content="越智彪冴 | 合同会社diviant">
+  <meta property="og:description" content="合同会社diviant代表取締役、越智彪冴の公式プロフィールページです。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://あなたのドメイン/membercard/Oti.html">
+  <meta property="og:image" content="https://あなたのドメイン/images/Oti.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+</head>
+<body>
+
+  <!-- 共通ヘッダー -->
+  <div id="header"></div>
+  <script>
+    fetch('../header.html')
+      .then(response => response.text())
+      .then(data => { document.getElementById('header').innerHTML = data; });
+  </script>
+
+  <!-- メインコンテンツ -->
+  <main>
+    <h2>越智彪冴</h2>
+    <img src="../images/Oti.jpg" alt="越智彪冴" class="member-photo">
+    <p>合同会社diviant代表取締役。楽曲制作および各種楽曲提供、人材派遣を担当。</p>
+
+    <!-- SNSリンク -->
+    <div class="sns-links">
+      <a href="https://twitter.com/username" target="_blank" rel="noopener">
+        <img src="../images/twitter-icon.png" alt="Twitter" class="sns-icon">
+      </a>
+      <a href="https://www.instagram.com/username" target="_blank" rel="noopener">
+        <img src="../images/instagram-icon.png" alt="Instagram" class="sns-icon">
+      </a>
+    </div>
+  </main>
+
+  <!-- フッター -->
+  <footer>
+    <!-- <p>© 2025 diviant</p> -->
+  </footer>
+
+</body>
+</html>
