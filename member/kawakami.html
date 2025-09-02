@@ -2,17 +2,26 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>鹿貴族 | 合同会社diviant</title>
-  <link rel="stylesheet" href="../style.css"> <!-- 1階層上のCSS -->
-  
+  <title>鹿貴族 | 合同会社diviant サポートメンバー</title>
+  <link rel="stylesheet" href="../style.css">
+
   <!-- SEO / SNS用 -->
-  <meta name="description" content="鹿貴族のプロフィールページ。合同会社diviant サポートメンバー">
-  <meta property="og:title" content="鹿貴族 | 合同会社diviant">
-  <meta property="og:description" content="合同会社diviantサポートメンバー、鹿貴族の公式プロフィールページです。">
+  <meta name="description" content="鹿貴族のプロフィールページ。合同会社diviantのサポートメンバーとして活動しています。">
+  <meta name="keywords" content="合同会社diviant, 鹿貴族, サポートメンバー, プロフィール">
+  <meta name="author" content="合同会社diviant">
+
+  <!-- OGP -->
+  <meta property="og:title" content="鹿貴族 | 合同会社diviant サポートメンバー">
+  <meta property="og:description" content="合同会社diviant サポートメンバー、鹿貴族の公式プロフィールページです。">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://あなたのドメイン/membercard/Oti.html">
-  <meta property="og:image" content="https://あなたのドメイン/images/Oti.jpg">
+  <meta property="og:url" content="https://あなたのドメイン/member/kawakami.html">
+  <meta property="og:image" content="https://あなたのドメイン/images/kawakami.jpg">
+
+  <!-- Twitterカード -->
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="鹿貴族 | 合同会社diviant サポートメンバー">
+  <meta name="twitter:description" content="合同会社diviantサポートメンバー、鹿貴族の公式プロフィールページです。">
+  <meta name="twitter:image" content="https://あなたのドメイン/images/kawakami.jpg">
 </head>
 <body>
 
@@ -24,34 +33,52 @@
       .then(data => { document.getElementById('header').innerHTML = data; });
   </script>
 
-  準備中
-
   <!-- メインコンテンツ -->
-  <!-- <main>
+  <main>
     <div class="member-profile">
-      <img src="../images/Oti.jpg" alt="越智彪冴" class="member-photo">
+      <img src="../images/kawakami.jpg" alt="鹿貴族" class="member-photo" loading="lazy">
 
       <div class="member-info">
-        <h2>越智彪冴</h2>
-        <p>合同会社diviant代表。楽曲制作および各種楽曲提供を担当する。</p>
-        <p>2004年誕生、現在20歳。幼少期からクラシック音楽を学びピアノは会社内でも一番の技能を持つ。スタッフのKeiZiとは中学からの交友がある。バンドから会社の指針決定など様々なことを一手に引き受ける。</p> -->
+        <h1>鹿貴族</h1>
+        <h2>合同会社diviant サポートメンバー</h2>
+        <p>鹿貴族は合同会社diviantのサポートメンバーとして活動しています。主に◯◯分野を担当し、チームの成長を支えています。</p>
 
-        <!-- <!- SNSリンク --> 
-        <!-- <div class="sns-links">
-          <a href="https://x.com/Cf3mtS" target="_blank" rel="noopener">
+        <!-- SNSリンク（例） -->
+        <div class="sns-links">
+          <a href="https://twitter.com/your_account" target="_blank" rel="noopener">
             <img src="../images/twitter-icon.png" alt="Twitter" class="sns-icon">
           </a>
-          <a href="https://www.instagram.com/hyogo1405?igsh=aGY4bWl2c3RyemN5&utm_source=qr" target="_blank" rel="noopener">
+          <a href="https://instagram.com/your_account" target="_blank" rel="noopener">
             <img src="../images/instagram-icon.png" alt="Instagram" class="sns-icon">
-          </a> -->
-          <!-- <a href="https://www.youtube.com/channel/xxxx" target="_blank" rel="noopener"> -->
-            <!-- <img src="../images/youtube-icon.png" alt="YouTube" class="sns-icon"> -->
-          <!-- </a> -->
-        <!-- </div> -->
-      <!-- </div> -->
-    <!-- </div> -->
-  <!-- </main> -->
- 
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 回遊性を高める内部リンク -->
+    <section class="related-members">
+      <h3>他のメンバーを見る</h3>
+      <div class="related-container">
+        <a href="Oti.html" class="related-card">
+          <img src="../images/Oti.jpg" alt="越智彪冴" loading="lazy">
+          <div class="related-name">越智彪冴</div>
+          <div class="related-position">代表取締役</div>
+        </a>
+        <a href="KeiZi.html" class="related-card">
+          <img src="../images/KeiZi.jpg" alt="KeiZi" loading="lazy">
+          <div class="related-name">KeiZi</div>
+          <div class="related-position">スタッフ</div>
+        </a>
+        <a href="REN.html" class="related-card">
+          <img src="../images/REN.jpg" alt="REN" loading="lazy">
+          <div class="related-name">REN</div>
+          <div class="related-position">サポートメンバー</div>
+        </a>
+      </div>
+      <p><a href="../member.html">← メンバー一覧に戻る</a></p>
+    </section>
+  </main>
+
   <!-- フッター -->
   <footer>
     <!-- <p>© 2025 diviant</p> -->
