@@ -2,26 +2,23 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>鹿貴族 | 合同会社diviant サポートメンバー</title>
+  <title>越智彪冴 | 合同会社 diviant</title>
   <link rel="stylesheet" href="../style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- SEO / SNS用 -->
-  <meta name="description" content="鹿貴族のプロフィールページ。合同会社diviantのサポートメンバーとして活動しています。">
-  <meta name="keywords" content="合同会社diviant, 鹿貴族, サポートメンバー, プロフィール">
-  <meta name="author" content="合同会社diviant">
+  <!-- 基本SEO -->
+  <meta name="description" content="合同会社diviantの越智彪冴プロフィールページ。代表取締役としての情報や他メンバーの紹介を掲載しています。">
+  <meta name="keywords" content="合同会社, diviant, 越智彪冴, 会社メンバー, プロフィール, 楽曲制作, 人材派遣">
+  <meta name="author" content="合同会社 diviant">
 
-  <!-- OGP -->
-  <meta property="og:title" content="鹿貴族 | 合同会社diviant サポートメンバー">
-  <meta property="og:description" content="合同会社diviant サポートメンバー、鹿貴族の公式プロフィールページです。">
+  <!-- Open Graph / SNS -->
+  <meta property="og:title" content="越智彪冴 | 合同会社 diviant">
+  <meta property="og:description" content="合同会社diviantの越智彪冴プロフィールページ。代表取締役としての情報を掲載しています。">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://あなたのドメイン/member/kawakami.html">
-  <meta property="og:image" content="https://あなたのドメイン/images/kawakami.jpg">
+  <meta property="og:url" content="https://あなたのサイト/member/OtiHyogo.html">
+  <meta property="og:image" content="https://あなたのサイト/images/hyogo.jpg">
 
-  <!-- Twitterカード -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="鹿貴族 | 合同会社diviant サポートメンバー">
-  <meta name="twitter:description" content="合同会社diviantサポートメンバー、鹿貴族の公式プロフィールページです。">
-  <meta name="twitter:image" content="https://あなたのドメイン/images/kawakami.jpg">
+  
 </head>
 <body>
 
@@ -35,54 +32,22 @@
 
   <!-- メインコンテンツ -->
   <main>
-    <div class="member-profile">
-      <img src="../images/kawakami.jpg" alt="鹿貴族" class="member-photo" loading="lazy">
+    <!-- 個人プロフィール表示 -->
+    <section id="member-profile" class="member-profile"></section>
 
-      <div class="member-info">
-        <h1>鹿貴族</h1>
-        <h2>合同会社diviant サポートメンバー</h2>
-        <p>鹿貴族は合同会社diviantのサポートメンバーとして活動しています。主に◯◯分野を担当し、チームの成長を支えています。</p>
-
-        <!-- SNSリンク（例） -->
-        <div class="sns-links">
-          <a href="https://twitter.com/your_account" target="_blank" rel="noopener">
-            <img src="../images/twitter-icon.png" alt="Twitter" class="sns-icon">
-          </a>
-          <a href="https://instagram.com/your_account" target="_blank" rel="noopener">
-            <img src="../images/instagram-icon.png" alt="Instagram" class="sns-icon">
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <!-- 回遊性を高める内部リンク -->
-    <section class="related-members">
-      <h3>他のメンバーを見る</h3>
-      <div class="related-container">
-        <a href="Oti.html" class="related-card">
-          <img src="../images/Oti.jpg" alt="越智彪冴" loading="lazy">
-          <div class="related-name">越智彪冴</div>
-          <div class="related-position">代表取締役</div>
-        </a>
-        <a href="KeiZi.html" class="related-card">
-          <img src="../images/KeiZi.jpg" alt="KeiZi" loading="lazy">
-          <div class="related-name">KeiZi</div>
-          <div class="related-position">スタッフ</div>
-        </a>
-        <a href="REN.html" class="related-card">
-          <img src="../images/REN.jpg" alt="REN" loading="lazy">
-          <div class="related-name">REN</div>
-          <div class="related-position">サポートメンバー</div>
-        </a>
-      </div>
-      <p><a href="../member.html">← メンバー一覧に戻る</a></p>
+    <!-- 他のメンバー一覧 -->
+    <section>
+      <h3>他のメンバー</h3>
+      <div id="members-container" class="members-container"></div>
     </section>
   </main>
 
-  <!-- フッター -->
-  <footer>
-    <!-- <p>© 2025 diviant</p> -->
-  </footer>
+  <!-- 個人ページ用 ID を設定 -->
+  <script>
+    window.memberId = 'Shikakizoku'; // このページで表示するメンバーID
+  </script>
 
+  <!-- member.js を読み込む -->
+  <script src="../member.js"></script>
 </body>
 </html>

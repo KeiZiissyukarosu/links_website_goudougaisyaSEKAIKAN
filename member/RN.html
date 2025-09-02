@@ -2,17 +2,24 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>RN | 合同会社diviant</title>
-  <link rel="stylesheet" href="../style.css"> <!-- 1階層上のCSS -->
-  
-  <!-- SEO / SNS用 -->
-  <meta name="description" content="RNのプロフィールページ。合同会社diviant サポートメンバー。">
-  <meta property="og:title" content="RN | 合同会社diviant">
-  <meta property="og:description" content="合同会社diviantスタッフ、RNの公式プロフィールページです。">
+  <title>越智彪冴 | 合同会社 diviant</title>
+  <link rel="stylesheet" href="../style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- 基本SEO -->
+  <meta name="description" content="合同会社diviantの越智彪冴プロフィールページ。代表取締役としての情報や他メンバーの紹介を掲載しています。">
+  <meta name="keywords" content="合同会社, diviant, 越智彪冴, 会社メンバー, プロフィール, 楽曲制作, 人材派遣">
+  <meta name="author" content="合同会社 diviant">
+
+  <!-- Open Graph / SNS -->
+  <meta property="og:title" content="越智彪冴 | 合同会社 diviant">
+  <meta property="og:description" content="合同会社diviantの越智彪冴プロフィールページ。代表取締役としての情報を掲載しています。">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://あなたのドメイン/membercard/Oti.html">
-  <meta property="og:image" content="https://あなたのドメイン/images/Oti.jpg">
-  <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:url" content="https://あなたのサイト/member/OtiHyogo.html">
+  <meta property="og:image" content="https://あなたのサイト/images/hyogo.jpg">
+
+  
+  
 </head>
 <body>
 
@@ -24,38 +31,24 @@
       .then(data => { document.getElementById('header').innerHTML = data; });
   </script>
 
-  準備中
-
   <!-- メインコンテンツ -->
-  <!-- <main>
-    <div class="member-profile">
-      <img src="../images/Oti.jpg" alt="越智彪冴" class="member-photo">
+  <main>
+    <!-- 個人プロフィール表示 -->
+    <section id="member-profile" class="member-profile"></section>
 
-      <div class="member-info">
-        <h2>越智彪冴</h2>
-        <p>合同会社diviant代表。楽曲制作および各種楽曲提供を担当する。</p>
-        <p>2004年誕生、現在20歳。幼少期からクラシック音楽を学びピアノは会社内でも一番の技能を持つ。スタッフのKeiZiとは中学からの交友がある。バンドから会社の指針決定など様々なことを一手に引き受ける。</p> -->
+    <!-- 他のメンバー一覧 -->
+    <section>
+      <h3>他のメンバー</h3>
+      <div id="members-container" class="members-container"></div>
+    </section>
+  </main>
 
-        <!-- <!- SNSリンク --> 
-        <!-- <div class="sns-links">
-          <a href="https://x.com/Cf3mtS" target="_blank" rel="noopener">
-            <img src="../images/twitter-icon.png" alt="Twitter" class="sns-icon">
-          </a>
-          <a href="https://www.instagram.com/hyogo1405?igsh=aGY4bWl2c3RyemN5&utm_source=qr" target="_blank" rel="noopener">
-            <img src="../images/instagram-icon.png" alt="Instagram" class="sns-icon">
-          </a> -->
-          <!-- <a href="https://www.youtube.com/channel/xxxx" target="_blank" rel="noopener"> -->
-            <!-- <img src="../images/youtube-icon.png" alt="YouTube" class="sns-icon"> -->
-          <!-- </a> -->
-        <!-- </div> -->
-      <!-- </div> -->
-    <!-- </div> -->
-  <!-- </main> -->
- 
-  <!-- フッター -->
-  <footer>
-    <!-- <p>© 2025 diviant</p> -->
-  </footer>
+  <!-- 個人ページ用 ID を設定 -->
+  <script>
+    window.memberId = 'RN'; // このページで表示するメンバーID
+  </script>
 
+  <!-- member.js を読み込む -->
+  <script src="../member.js"></script>
 </body>
 </html>
