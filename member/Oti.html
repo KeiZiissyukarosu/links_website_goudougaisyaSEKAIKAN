@@ -5,6 +5,34 @@
   <title>越智彪冴 | 合同会社 diviant</title>
   <link rel="stylesheet" href="../style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- 基本SEO -->
+  <meta name="description" content="合同会社diviantの越智彪冴プロフィールページ。代表取締役としての情報や他メンバーの紹介を掲載しています。">
+  <meta name="keywords" content="合同会社, diviant, 越智彪冴, 会社メンバー, プロフィール, 楽曲制作, 人材派遣">
+  <meta name="author" content="合同会社 diviant">
+
+  <!-- Open Graph / SNS -->
+  <meta property="og:title" content="越智彪冴 | 合同会社 diviant">
+  <meta property="og:description" content="合同会社diviantの越智彪冴プロフィールページ。代表取締役としての情報を掲載しています。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://あなたのサイト/member/OtiHyogo.html">
+  <meta property="og:image" content="https://あなたのサイト/images/hyogo.jpg">
+
+  <!-- 構造化データ（JSON-LD） -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "越智彪冴",
+    "jobTitle": "代表取締役",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "合同会社 diviant"
+    },
+    "image": "https://あなたのサイト/images/hyogo.jpg",
+    "url": "https://あなたのサイト/member/OtiHyogo.html"
+  }
+  </script>
 </head>
 <body>
 
@@ -18,17 +46,19 @@
 
   <!-- メインコンテンツ -->
   <main>
-    <!-- プロフィール表示 -->
-    <div id="member-profile" class="member-profile"></div>
+    <!-- 個人プロフィール表示 -->
+    <section id="member-profile" class="member-profile"></section>
 
     <!-- 他のメンバー一覧 -->
-    <h3>他のメンバー</h3>
-    <div id="members-container" class="members-container"></div>
+    <section>
+      <h3>他のメンバー</h3>
+      <div id="members-container" class="members-container"></div>
+    </section>
   </main>
 
   <!-- 個人ページ用 ID を設定 -->
   <script>
-    const memberId = 'OtiHyogo'; // このページで表示するメンバーID
+    window.memberId = 'OtiHyogo'; // このページで表示するメンバーID
   </script>
 
   <!-- member.js を読み込む -->

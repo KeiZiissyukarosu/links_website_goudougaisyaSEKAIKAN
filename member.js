@@ -1,4 +1,4 @@
-// ページ階層に応じて JSON パスを自動設定
+// ---------- JSONパス自動設定 ----------
 let jsonPath = 'member.json'; // member.html の場合
 if (window.location.pathname.includes('/member/')) {
   jsonPath = '../member.json'; // 個人ページは1階層上
@@ -7,6 +7,7 @@ if (window.location.pathname.includes('/member/')) {
 // 個人ページ用ID（個人ページのみ設定）
 const memberId = window.memberId;
 
+// ---------- JSON読み込み ----------
 fetch(jsonPath)
   .then(response => response.json())
   .then(members => {
@@ -27,19 +28,30 @@ fetch(jsonPath)
       }
     }
 
-    // ---------- 一覧ページ / フッター直前の全員カード ----------
+    // ---------- 一覧ページ用カード（個人ページでは現在のメンバーを除外） ----------
     const container = document.getElementById('members-container');
     if (container) {
-      members.forEach(member => {
+      // 個人ページなら現在のメンバーを除外
+      const membersToShow = memberId ? members.filter(m => m.id !== memberId) : members;
+
+      membersToShow.forEach(member => {
         const card = document.createElement('div');
         card.classList.add('member-card');
+
+        // 画像・名前・役職
         card.innerHTML = `
-          <a href="${jsonPath.includes('../') ? member.profilePage : 'member/' + member.profilePage}">
-            <img src="${jsonPath.includes('../') ? '../images/' : 'images/'}${member.image}" alt="${member.name}" class="member-photo">
-            <div class="member-name">${member.name}</div>
-            <div class="member-position">${member.position}</div>
-          </a>
+          <img src="${jsonPath.includes('../') ? '../images/' : 'images/'}${member.image}" alt="${member.name}" class="member-photo">
+          <div class="member-name">${member.name}</div>
+          <div class="member-position">${member.position}</div>
         `;
+
+        // クリックでリンクに飛ぶ
+        const profileLink = jsonPath.includes('../') ? member.profilePage : 'member/' + member.profilePage;
+        card.addEventListener('click', () => {
+          window.location.href = profileLink;
+        });
+
+        // カードをコンテナに追加
         container.appendChild(card);
       });
     }
