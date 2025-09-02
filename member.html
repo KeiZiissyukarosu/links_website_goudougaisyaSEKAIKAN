@@ -1,39 +1,48 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <title>合同会社 diviant | 会社メンバー</title>
-  <link rel="stylesheet" href="style.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+// ページ階層に応じて JSON パスを自動設定
+let jsonPath = 'members.json'; // member.html の場合はルート直下
+if (window.location.pathname.includes('/member/')) {
+  jsonPath = '../members.json'; // 個人ページは1階層上
+}
 
-  <!-- SEO / SNS用 -->
-  <meta name="description" content="合同会社diviantの会社メンバー紹介ページです。代表者およびスタッフの情報を掲載しています。">
-  <meta name="keywords" content="合同会社, diviant, 会社メンバー, 楽曲制作, 人材派遣">
-  <meta name="author" content="合同会社 diviant">
-</head>
-<body>
+// 個人ページ用ID（個人ページのみ設定する）
+const memberId = window.memberId;
 
-  <!-- 共通ヘッダー -->
-  <div id="header"></div>
-  <script>
-    fetch('header.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('header').innerHTML = data;
+fetch(jsonPath)
+  .then(response => response.json())
+  .then(members => {
+
+    // ---------- 個人ページ用プロフィール ----------
+    const profileContainer = document.getElementById('member-profile');
+    if (profileContainer && memberId) {
+      const member = members.find(m => m.id === memberId);
+      if (member) {
+        profileContainer.innerHTML = `
+          <img src="${jsonPath.includes('../') ? '../images/' : 'images/'}${member.image}" alt="${member.name}" class="member-photo">
+          <h2>${member.name}</h2>
+          <p class="member-position">${member.position}</p>
+          <p class="member-bio">${member.bio ? member.bio.replace(/\n/g, '<br>') : ''}</p>
+        `;
+      } else {
+        profileContainer.innerHTML = '<p>メンバー情報が見つかりません</p>';
+      }
+    }
+
+    // ---------- 一覧ページ / フッター直前の全員カード ----------
+    const container = document.getElementById('members-container');
+    if (container) {
+      members.forEach(member => {
+        const card = document.createElement('div');
+        card.classList.add('member-card');
+        card.innerHTML = `
+          <a href="${jsonPath.includes('../') ? member.profilePage : 'member/' + member.profilePage}">
+            <img src="${jsonPath.includes('../') ? '../images/' : 'images/'}${member.image}" alt="${member.name}" class="member-photo">
+            <div class="member-name">${member.name}</div>
+            <div class="member-position">${member.position}</div>
+          </a>
+        `;
+        container.appendChild(card);
       });
-  </script>
+    }
 
-  <!-- メインコンテンツ -->
-  <main>
-    <h2>会社メンバー</h2>
-
-    <!-- メンバー全員カード -->
-    <div id="members-container" class="members-container">
-      <!-- member.js で自動生成されます -->
-    </div>
-  </main>
-
-  <!-- JSを読み込むだけで全員カードを生成 -->
-  <script src="member.js"></script>
-</body>
-</html>
+  })
+  .catch(error => console.error('Error loading members.json:', error));

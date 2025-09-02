@@ -2,12 +2,9 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>越智彪冴 | 合同会社diviant</title>
+  <title>越智彪冴 | 合同会社 diviant</title>
   <link rel="stylesheet" href="../style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- SEO / SNS用 -->
-  <meta name="description" content="越智彪冴のプロフィールページ。合同会社diviant代表取締役、楽曲制作・各種楽曲提供・人材派遣を担当。">
 </head>
 <body>
 
@@ -16,25 +13,25 @@
   <script>
     fetch('../header.html')
       .then(response => response.text())
-      .then(data => {
-        document.getElementById('header').innerHTML = data;
-      });
+      .then(data => { document.getElementById('header').innerHTML = data; });
   </script>
 
   <!-- メインコンテンツ -->
   <main>
-    <!-- 個人プロフィール -->
+    <!-- プロフィール表示 -->
     <div id="member-profile" class="member-profile"></div>
 
-    <!-- 他のメンバー全員カード -->
+    <!-- 他のメンバー一覧 -->
     <h3>他のメンバー</h3>
     <div id="members-container" class="members-container"></div>
   </main>
 
-  <!-- 個人ページ用IDを設定して member.js を読み込む -->
+  <!-- 個人ページ用 ID を設定 -->
   <script>
-    const memberId = 'OtiHyogo'; // 表示したいメンバーのID
+    const memberId = 'OtiHyogo'; // このページで表示するメンバーID
   </script>
+
+  <!-- member.js を読み込む -->
   <script src="../member.js"></script>
 </body>
 </html>
