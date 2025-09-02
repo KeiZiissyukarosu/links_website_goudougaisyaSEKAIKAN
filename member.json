@@ -1,0 +1,38 @@
+[
+  {
+    "id": "OtiHyogo",
+    "name": "越智彪冴",
+    "position": "代表取締役",
+    "image": "Oti.jpg",
+    "profilePage": "Oti.html"
+  },
+  {
+    "id": "KeiZi",
+    "name": "KeiZi",
+    "position": "スタッフ",
+    "image": "KeiZi.jpg",
+    "profilePage": "KeiZi.html"
+  },
+  {
+    "id": "Shikakizoku",
+    "name": "鹿貴族",
+    "position": "サポートメンバー",
+    "image": "kawakami.jpg",
+    "profilePage": "kawakami.html"
+  },
+  {
+    "id": "Takubo-",
+    "name": "たくぼー",
+    "position": "サポートメンバー",
+    "image": "takubo-.jpg",
+    "profilePage": "takubo-.html"
+  },
+  {
+    "id": "RN",
+    "name": "RN",
+    "position": "サポートメンバー",
+    "image": "RN.jpg",
+    "profilePage": "RN.html"
+  }
+
+]
