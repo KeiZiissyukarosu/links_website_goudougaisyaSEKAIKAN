@@ -1,8 +1,9 @@
 /* --- 共通スタイル --- */
-body {
-  background-color: lightblue;
+html, body {
+  background-color: lightblue; /* htmlにも指定 */
   font-family: Arial, sans-serif;
-  margin: 20px;
+  margin: 0;         /* bodyの余白は0にして全体統一 */
+  padding: 20px;     /* paddingを追加 */
   line-height: 1.6;
 }
 
