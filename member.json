@@ -14,28 +14,32 @@
     "name": "KeiZi",
     "position": "スタッフ",
     "image": "KeiZi.jpg",
-    "profilePage": "KeiZi.html"
+    "profilePage": "KeiZi.html",
+    "bio":"準備中"
   },
   {
     "id": "Shikakizoku",
     "name": "鹿貴族",
     "position": "サポートメンバー",
     "image": "kawakami.jpg",
-    "profilePage": "kawakami.html"
+    "profilePage": "kawakami.html",
+    "bio":"準備中"
   },
   {
     "id": "Takubo-",
     "name": "たくぼー",
     "position": "サポートメンバー",
     "image": "takubo-.jpg",
-    "profilePage": "takubo-.html"
+    "profilePage": "takubo-.html",
+    "bio":"準備中"
   },
   {
     "id": "RN",
     "name": "RN",
     "position": "サポートメンバー",
     "image": "RN.jpg",
-    "profilePage": "RN.html"
+    "profilePage": "RN.html",
+    "bio":"準備中"
   }
 
 ]
