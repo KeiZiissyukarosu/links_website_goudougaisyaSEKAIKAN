@@ -49,18 +49,13 @@ header nav a:hover {
 
 /* ------------------ メンバーカード ------------------ */
 .members-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
   gap: 20px;
   margin-top: 20px;
 }
 
 .member-card {
-  flex: 1 1 150px;
-  max-width: 160px;
-  display: flex;
-  flex-direction: column;
   border: 1px solid #ccc;
   padding: 10px;
   text-align: center;
@@ -189,7 +184,7 @@ header nav a:hover {
   object-fit: contain;
 }
 
-/* ------------------ レスポンシブ（スマホ：常に2列揃え） ------------------ */
+/* ------------------ レスポンシブ ------------------ */
 @media screen and (max-width: 600px) {
   header nav ul {
     flex-direction: column;
@@ -202,14 +197,8 @@ header nav a:hover {
   }
 
   .members-container {
-    justify-content: flex-start; /* 左寄せで2列揃え */
+    grid-template-columns: repeat(2, 1fr); /* スマホでは常に2列固定 */
     gap: 10px;
-  }
-
-  .member-card {
-    width: calc(50% - 10px); /* gap分を引いて2列固定 */
-    flex: none;              /* flexの伸縮を無効化 */
-    max-width: none;
   }
 
   .member-profile {
