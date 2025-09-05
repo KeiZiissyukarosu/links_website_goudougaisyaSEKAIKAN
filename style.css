@@ -47,7 +47,7 @@ header nav a:hover {
   border-radius: 5px;
 }
 
-/* ------------------ メンバーカード ------------------ */
+/* ------------------ メンバーカード一覧 ------------------ */
 .members-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
@@ -65,6 +65,7 @@ header nav a:hover {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-decoration: none;
   color: inherit;
+  background-color: #fff;
 }
 
 .member-card:hover {
@@ -184,7 +185,7 @@ header nav a:hover {
   object-fit: contain;
 }
 
-/* ------------------ レスポンシブ ------------------ */
+/* ------------------ レスポンシブ（スマホ：必ず2列揃え） ------------------ */
 @media screen and (max-width: 600px) {
   header nav ul {
     flex-direction: column;
@@ -197,7 +198,7 @@ header nav a:hover {
   }
 
   .members-container {
-    grid-template-columns: repeat(2, 1fr); /* スマホでは常に2列固定 */
+    grid-template-columns: repeat(2, 1fr); /* 常に2列固定 */
     gap: 10px;
   }
 
