@@ -1,6 +1,6 @@
 /* ------------------ 共通スタイル ------------------ */
 html, body {
-  background-color: lightblue; /* 背景色をhtmlにも指定 */
+  background-color: lightblue;
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 20px;
@@ -57,8 +57,8 @@ header nav a:hover {
 }
 
 .member-card {
-  flex: 1 1 150px;       /* 最小150pxで可変 */
-  max-width: 160px;      /* 最大幅を制限 */
+  flex: 1 1 150px;
+  max-width: 160px;
   display: flex;
   flex-direction: column;
   border: 1px solid #ccc;
@@ -189,7 +189,7 @@ header nav a:hover {
   object-fit: contain;
 }
 
-/* ------------------ レスポンシブ（スマホ） ------------------ */
+/* ------------------ レスポンシブ（スマホ：常に2列揃え） ------------------ */
 @media screen and (max-width: 600px) {
   header nav ul {
     flex-direction: column;
@@ -202,13 +202,14 @@ header nav a:hover {
   }
 
   .members-container {
-    justify-content: center; /* 中央寄せに変更 */
+    justify-content: flex-start; /* 左寄せで2列揃え */
     gap: 10px;
   }
 
   .member-card {
-    flex: 1 1 45%;  /* 2列並びに最適化 */
-    max-width: 45%;
+    width: calc(50% - 10px); /* gap分を引いて2列固定 */
+    flex: none;              /* flexの伸縮を無効化 */
+    max-width: none;
   }
 
   .member-profile {
