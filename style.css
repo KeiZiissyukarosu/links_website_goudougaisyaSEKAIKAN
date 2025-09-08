@@ -166,6 +166,13 @@ header nav a:hover {
   border-radius: 10px;
   background-color: #fafafa;
   box-shadow: var(--card-shadow);
+  transition: transform 0.25s ease , box-shadow 0.25s ease;
+}
+
+.work:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0,0,0,2);
+
 }
 
 .work h2 {
